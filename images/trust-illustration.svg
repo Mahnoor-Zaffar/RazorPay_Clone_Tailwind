@@ -1,0 +1,21 @@
+<svg width="520" height="440" viewBox="0 0 520 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="trustTitle trustDesc">
+  <title id="trustTitle">Trusted businesses illustration</title>
+  <desc id="trustDesc">A decorative business network with cards and connection nodes.</desc>
+  <rect x="88" y="42" width="344" height="356" rx="32" fill="#F3F8FF"/>
+  <rect x="136" y="91" width="248" height="70" rx="18" fill="white"/>
+  <rect x="136" y="185" width="248" height="70" rx="18" fill="white"/>
+  <rect x="136" y="279" width="248" height="70" rx="18" fill="white"/>
+  <circle cx="181" cy="126" r="20" fill="#2B84EA"/>
+  <circle cx="181" cy="220" r="20" fill="#61CEA6"/>
+  <circle cx="181" cy="314" r="20" fill="#344A6C"/>
+  <rect x="222" y="112" width="96" height="11" rx="5.5" fill="#344A6C"/>
+  <rect x="222" y="137" width="124" height="9" rx="4.5" fill="#A7B4C8"/>
+  <rect x="222" y="206" width="84" height="11" rx="5.5" fill="#344A6C"/>
+  <rect x="222" y="231" width="110" height="9" rx="4.5" fill="#A7B4C8"/>
+  <rect x="222" y="300" width="112" height="11" rx="5.5" fill="#344A6C"/>
+  <rect x="222" y="325" width="86" height="9" rx="4.5" fill="#A7B4C8"/>
+  <path d="M67 113L96 160H38L67 113Z" fill="#61CEA6"/>
+  <path d="M459 285L490 337H428L459 285Z" fill="#2B84EA"/>
+  <circle cx="435" cy="93" r="35" fill="#02042A"/>
+  <path d="M420 93H450M435 78V108" stroke="white" stroke-width="8" stroke-linecap="round"/>
+</svg>

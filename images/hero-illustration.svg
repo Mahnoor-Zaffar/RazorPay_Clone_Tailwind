@@ -1,0 +1,22 @@
+<svg width="680" height="520" viewBox="0 0 680 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Finance dashboard illustration</title>
+  <desc id="heroDesc">A stylized payments dashboard with transaction cards and growth charts.</desc>
+  <rect width="680" height="520" rx="34" fill="#071044"/>
+  <path d="M53 86C53 66.67 68.67 51 88 51H533C552.33 51 568 66.67 568 86V380C568 399.33 552.33 415 533 415H88C68.67 415 53 399.33 53 380V86Z" fill="white"/>
+  <path d="M53 86C53 66.67 68.67 51 88 51H533C552.33 51 568 66.67 568 86V126H53V86Z" fill="#2B84EA"/>
+  <circle cx="91" cy="89" r="9" fill="#61CEA6"/>
+  <circle cx="122" cy="89" r="9" fill="#BDE3FF"/>
+  <circle cx="153" cy="89" r="9" fill="#FFFFFF"/>
+  <rect x="91" y="165" width="176" height="82" rx="14" fill="#F3F8FF"/>
+  <rect x="91" y="277" width="176" height="82" rx="14" fill="#F6F8FC"/>
+  <rect x="302" y="165" width="228" height="194" rx="14" fill="#F8FAFF"/>
+  <path d="M328 312L366 276L410 291L455 232L507 198" stroke="#2B84EA" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="121" y="190" width="73" height="11" rx="5.5" fill="#344A6C"/>
+  <rect x="121" y="216" width="112" height="11" rx="5.5" fill="#A7B4C8"/>
+  <rect x="121" y="303" width="94" height="11" rx="5.5" fill="#344A6C"/>
+  <rect x="121" y="329" width="74" height="11" rx="5.5" fill="#A7B4C8"/>
+  <circle cx="547" cy="370" r="76" fill="#61CEA6"/>
+  <path d="M514 370L537 393L584 339" stroke="white" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M611 124L641 174H581L611 124Z" fill="#4B95ED"/>
+  <path d="M91 442L124 487H58L91 442Z" fill="#61CEA6"/>
+</svg>
