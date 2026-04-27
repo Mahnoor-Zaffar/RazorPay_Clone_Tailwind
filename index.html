@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A frontend-only Razorpay-inspired landing page clone built with Tailwind CSS, Vite, and plain HTML."
+    />
+    <title>Razorpay Landing Page Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" crossorigin href="/tailwind_RazorPay_Clone/assets/index-iqHAShNy.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-deepBlue text-white shadow-[0_1px_0_rgba(255,255,255,0.08)]">
+      <nav class="page-shell flex min-h-16 items-center justify-between gap-6" aria-label="Primary navigation">
+        <a href="#" class="flex shrink-0 items-center gap-3" aria-label="Razorpay clone home">
+          <span class="grid h-10 w-10 place-items-center rounded-sm bg-white text-xl font-black text-lightBlue">R</span>
+          <span class="text-xl font-black tracking-wide">Razorpay</span>
+        </a>
+
+        <div class="hidden items-center gap-7 lg:flex">
+          <a href="#payments" class="nav-link">Payments</a>
+          <a href="#banking" class="nav-link">Banking</a>
+          <a href="#products" class="nav-link">Corporate Card</a>
+          <a href="#banking" class="nav-link">Payroll</a>
+          <a href="#features" class="nav-link">Resources</a>
+          <a href="#footer" class="nav-link">Support</a>
+          <a href="#products" class="nav-link">Pricing</a>
+        </div>
+
+        <div class="hidden shrink-0 items-center gap-4 lg:flex">
+          <span class="flex h-7 w-10 overflow-hidden rounded-sm border border-white/20 bg-white" aria-label="India flag placeholder">
+            <span class="grid h-full w-full grid-rows-3">
+              <span class="bg-orange-500"></span>
+              <span class="bg-white"></span>
+              <span class="bg-green-600"></span>
+            </span>
+          </span>
+          <a href="#" class="rounded-sm border border-lightBlue300 px-5 py-2.5 text-sm font-extrabold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:text-lightBlue500">
+            Login
+          </a>
+          <a href="#" class="primary-button-light !min-h-10 !px-5 !py-2.5">
+            Sign Up
+            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M11.3 3.3a1 1 0 0 0 0 1.4L15.6 9H3a1 1 0 1 0 0 2h12.6l-4.3 4.3a1 1 0 1 0 1.4 1.4l6-6a1 1 0 0 0 0-1.4l-6-6a1 1 0 0 0-1.4 0Z" />
+            </svg>
+          </a>
+        </div>
+
+        <button
+          id="menu-button"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-white/15 bg-white/5 text-white transition hover:bg-white/10 lg:hidden"
+          type="button"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle navigation menu</span>
+          <svg id="menu-open-icon" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" />
+          </svg>
+          <svg id="menu-close-icon" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 6l12 12M18 6 6 18" stroke-linecap="round" />
+          </svg>
+        </button>
+      </nav>
+
+      <div id="mobile-menu" class="hidden border-t border-white/10 bg-deepBlue lg:hidden">
+        <div class="page-shell grid gap-3 py-4">
+          <a href="#payments" class="mobile-nav-link">Payments <span aria-hidden="true">&rarr;</span></a>
+          <a href="#banking" class="mobile-nav-link">Banking <span aria-hidden="true">&rarr;</span></a>
+          <a href="#products" class="mobile-nav-link">Corporate Card <span aria-hidden="true">&rarr;</span></a>
+          <a href="#banking" class="mobile-nav-link">Payroll <span aria-hidden="true">&rarr;</span></a>
+          <a href="#features" class="mobile-nav-link">Resources <span aria-hidden="true">&rarr;</span></a>
+          <a href="#footer" class="mobile-nav-link">Support <span aria-hidden="true">&rarr;</span></a>
+          <a href="#products" class="mobile-nav-link">Pricing <span aria-hidden="true">&rarr;</span></a>
+          <div class="grid grid-cols-2 gap-3 pt-2">
+            <a href="#" class="inline-flex min-h-11 items-center justify-center rounded-sm border border-lightBlue300 px-4 text-sm font-extrabold text-white transition hover:bg-white/10">
+              Login
+            </a>
+            <a href="#" class="inline-flex min-h-11 items-center justify-center rounded-sm bg-white px-4 text-sm font-extrabold text-lightBlue500 transition hover:bg-lightGrey">
+              Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="clip-slant-bottom relative isolate overflow-hidden bg-deepBlue pb-20 pt-10 text-white md:pb-28 lg:pt-14">
+        <div class="absolute left-6 top-32 hidden h-16 w-16 rotate-45 border border-lightBlue300/30 lg:block"></div>
+        <div class="absolute right-8 top-20 hidden h-24 w-24 border-b-[48px] border-l-[48px] border-r-[48px] border-b-greenLight/20 border-l-transparent border-r-transparent xl:block"></div>
+        <div class="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(180deg,rgba(2,4,42,0)_0%,rgba(43,132,234,0.18)_100%)]"></div>
+
+        <div class="page-shell relative grid items-center gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:gap-14">
+          <div class="max-w-xl">
+            <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-greenLight">Payments. Banking. Growth.</p>
+            <h1 class="mt-5 text-[2.6rem] font-black leading-[1.05] sm:text-5xl lg:text-6xl">
+              Power your finance, Grow your business
+            </h1>
+            <div class="mt-7 h-1 w-7 rounded-full bg-greenLight"></div>
+            <p class="mt-7 max-w-lg text-lg leading-8 text-white/80">
+              Accept payments from customers. Automate payouts to vendors &amp; employees. Never run out of working capital.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="#" class="primary-button">
+                Sign Up Now
+                <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M11.3 3.3a1 1 0 0 0 0 1.4L15.6 9H3a1 1 0 1 0 0 2h12.6l-4.3 4.3a1 1 0 1 0 1.4 1.4l6-6a1 1 0 0 0 0-1.4l-6-6a1 1 0 0 0-1.4 0Z" />
+                </svg>
+              </a>
+              <a href="#payments" class="inline-flex min-h-12 items-center justify-center rounded-sm border border-white/20 px-6 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/10">
+                Explore products
+              </a>
+            </div>
+          </div>
+
+          <div class="relative mx-auto w-full max-w-2xl lg:max-w-none">
+            <div class="absolute -left-4 top-8 h-20 w-20 rounded-full bg-greenLight/20 blur-2xl"></div>
+            <img src="data:image/svg+xml,%3csvg%20width='680'%20height='520'%20viewBox='0%200%20680%20520'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20role='img'%20aria-labelledby='heroTitle%20heroDesc'%3e%3ctitle%20id='heroTitle'%3eFinance%20dashboard%20illustration%3c/title%3e%3cdesc%20id='heroDesc'%3eA%20stylized%20payments%20dashboard%20with%20transaction%20cards%20and%20growth%20charts.%3c/desc%3e%3crect%20width='680'%20height='520'%20rx='34'%20fill='%23071044'/%3e%3cpath%20d='M53%2086C53%2066.67%2068.67%2051%2088%2051H533C552.33%2051%20568%2066.67%20568%2086V380C568%20399.33%20552.33%20415%20533%20415H88C68.67%20415%2053%20399.33%2053%20380V86Z'%20fill='white'/%3e%3cpath%20d='M53%2086C53%2066.67%2068.67%2051%2088%2051H533C552.33%2051%20568%2066.67%20568%2086V126H53V86Z'%20fill='%232B84EA'/%3e%3ccircle%20cx='91'%20cy='89'%20r='9'%20fill='%2361CEA6'/%3e%3ccircle%20cx='122'%20cy='89'%20r='9'%20fill='%23BDE3FF'/%3e%3ccircle%20cx='153'%20cy='89'%20r='9'%20fill='%23FFFFFF'/%3e%3crect%20x='91'%20y='165'%20width='176'%20height='82'%20rx='14'%20fill='%23F3F8FF'/%3e%3crect%20x='91'%20y='277'%20width='176'%20height='82'%20rx='14'%20fill='%23F6F8FC'/%3e%3crect%20x='302'%20y='165'%20width='228'%20height='194'%20rx='14'%20fill='%23F8FAFF'/%3e%3cpath%20d='M328%20312L366%20276L410%20291L455%20232L507%20198'%20stroke='%232B84EA'%20stroke-width='12'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3crect%20x='121'%20y='190'%20width='73'%20height='11'%20rx='5.5'%20fill='%23344A6C'/%3e%3crect%20x='121'%20y='216'%20width='112'%20height='11'%20rx='5.5'%20fill='%23A7B4C8'/%3e%3crect%20x='121'%20y='303'%20width='94'%20height='11'%20rx='5.5'%20fill='%23344A6C'/%3e%3crect%20x='121'%20y='329'%20width='74'%20height='11'%20rx='5.5'%20fill='%23A7B4C8'/%3e%3ccircle%20cx='547'%20cy='370'%20r='76'%20fill='%2361CEA6'/%3e%3cpath%20d='M514%20370L537%20393L584%20339'%20stroke='white'%20stroke-width='15'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M611%20124L641%20174H581L611%20124Z'%20fill='%234B95ED'/%3e%3cpath%20d='M91%20442L124%20487H58L91%20442Z'%20fill='%2361CEA6'/%3e%3c/svg%3e" alt="Payments dashboard illustration" class="relative w-full drop-shadow-2xl" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Checkout Demo -->
+      <section id="checkout-demo" class="section-space bg-[linear-gradient(180deg,#f8fbff_0%,#ffffff_100%)]">
+        <div class="page-shell">
+          <p class="section-kicker">Mock checkout</p>
+          <h2 class="section-heading mt-3">Try the Checkout Experience</h2>
+          <div class="heading-rule"></div>
+          <p class="body-copy mx-auto mt-6 max-w-2xl text-center">
+            Add demo products, review the cart, choose a mock payment method, and trigger a frontend-only success state. No real payment is processed.
+          </p>
+
+          <div class="mt-12 grid gap-8 lg:grid-cols-[1fr_410px]">
+            <div>
+              <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                <article class="checkout-item-card">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-full bg-lightBlue/10 text-lightBlue500">
+                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <rect x="7" y="3" width="10" height="18" rx="5" />
+                      <path d="M12 7v3" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <h3 class="mt-6 text-xl font-black text-deepBlueHead">Wireless Mouse</h3>
+                  <p class="mt-2 text-sm leading-6 text-greyText">Compact wireless mouse for everyday productivity.</p>
+                  <div class="mt-auto flex items-center justify-between gap-4 pt-6">
+                    <span class="text-lg font-black text-deepBlueHead">&#8377;799</span>
+                    <button class="add-to-cart rounded-sm bg-lightBlue px-4 py-2.5 text-sm font-extrabold text-white transition hover:bg-lightBlue500" type="button" data-id="mouse">
+                      Add to Cart
+                    </button>
+                  </div>
+                </article>
+
+                <article class="checkout-item-card">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-full bg-lightBlue/10 text-lightBlue500">
+                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <rect x="3" y="6" width="18" height="12" rx="2" />
+                      <path d="M7 10h.01M10 10h.01M13 10h.01M16 10h.01M8 14h8" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <h3 class="mt-6 text-xl font-black text-deepBlueHead">Keyboard</h3>
+                  <p class="mt-2 text-sm leading-6 text-greyText">Responsive keyboard with a clean low-profile layout.</p>
+                  <div class="mt-auto flex items-center justify-between gap-4 pt-6">
+                    <span class="text-lg font-black text-deepBlueHead">&#8377;1,299</span>
+                    <button class="add-to-cart rounded-sm bg-lightBlue px-4 py-2.5 text-sm font-extrabold text-white transition hover:bg-lightBlue500" type="button" data-id="keyboard">
+                      Add to Cart
+                    </button>
+                  </div>
+                </article>
+
+                <article class="checkout-item-card sm:col-span-2 xl:col-span-1">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-full bg-lightBlue/10 text-lightBlue500">
+                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M9 7H6a3 3 0 0 0 0 6h3M15 17h3a3 3 0 0 0 0-6h-3" stroke-linecap="round" />
+                      <path d="M8 13l8-8M8 19l8-8" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <h3 class="mt-6 text-xl font-black text-deepBlueHead">USB-C Cable</h3>
+                  <p class="mt-2 text-sm leading-6 text-greyText">Durable charging cable for fast desk setup.</p>
+                  <div class="mt-auto flex items-center justify-between gap-4 pt-6">
+                    <span class="text-lg font-black text-deepBlueHead">&#8377;399</span>
+                    <button class="add-to-cart rounded-sm bg-lightBlue px-4 py-2.5 text-sm font-extrabold text-white transition hover:bg-lightBlue500" type="button" data-id="cable">
+                      Add to Cart
+                    </button>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <aside class="rounded-md border border-slate-200 bg-white p-5 shadow-razor sm:p-6" aria-label="Mock cart summary">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-lightBlue500">Cart summary</p>
+                  <h3 class="mt-2 text-2xl font-black text-deepBlueHead">Demo Checkout</h3>
+                </div>
+                <span class="rounded-full bg-greenLight/15 px-3 py-1 text-xs font-black text-greenLight">Mock UI</span>
+              </div>
+
+              <div id="cart-items" class="mt-6 min-h-24 space-y-3 rounded-md border border-slate-100 bg-slate-50 p-4">
+                <p class="text-sm font-semibold text-greyText">Your selected items will appear here.</p>
+              </div>
+
+              <div class="mt-5 space-y-3 border-t border-slate-100 pt-5 text-sm font-bold">
+                <div class="flex justify-between gap-4 text-grey2">
+                  <span>Subtotal</span>
+                  <span id="checkout-subtotal">&#8377;0</span>
+                </div>
+                <div class="flex justify-between gap-4 text-grey2">
+                  <span>Platform fee</span>
+                  <span id="checkout-fee">&#8377;0</span>
+                </div>
+                <div class="flex justify-between gap-4 border-t border-slate-100 pt-3 text-lg font-black text-deepBlueHead">
+                  <span>Total</span>
+                  <span id="checkout-total">&#8377;0</span>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <p class="text-sm font-black text-deepBlueHead">Payment method</p>
+                <div class="mt-3 grid grid-cols-2 gap-3" role="group" aria-label="Mock payment method selector">
+                  <button class="payment-method payment-method-active" type="button" data-method="UPI">UPI</button>
+                  <button class="payment-method" type="button" data-method="Card">Card</button>
+                  <button class="payment-method" type="button" data-method="Netbanking">Netbanking</button>
+                  <button class="payment-method" type="button" data-method="Wallet">Wallet</button>
+                </div>
+              </div>
+
+              <button id="pay-securely" class="primary-button mt-6 w-full" type="button">
+                Pay Securely
+              </button>
+              <p id="checkout-status" class="mt-4 hidden rounded-md bg-greenLight/15 px-4 py-3 text-sm font-extrabold text-greenLight" role="status">
+                Payment successful &mdash; demo only
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Payment Suite -->
+      <section id="payments" class="section-space relative bg-white">
+        <div class="absolute left-0 top-24 hidden h-20 w-20 border-b-[80px] border-l-[80px] border-b-lightBlue/10 border-l-transparent lg:block"></div>
+        <div class="page-shell">
+          <p class="section-kicker">Payment Suite</p>
+          <h2 class="section-heading mt-3">Accept payments with Razorpay Payment Suite</h2>
+          <div class="heading-rule"></div>
+
+          <article class="feature-panel mt-14">
+            <div class="p-6 sm:p-8 lg:p-12">
+              <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-lightBlue500">Payment Gateway</p>
+              <h3 class="mt-4 text-2xl font-black leading-snug text-deepBlueHead md:text-3xl">
+                Supercharge your business with the all-powerful Payment Gateway
+              </h3>
+              <ul class="mt-8 grid gap-4 sm:grid-cols-2">
+                <li class="check-item"><span class="check-mark">&check;</span>100+ Payment Methods</li>
+                <li class="check-item"><span class="check-mark">&check;</span>Industry Leading Success Rate</li>
+                <li class="check-item"><span class="check-mark">&check;</span>Superior Checkout Experience</li>
+                <li class="check-item"><span class="check-mark">&check;</span>Easy to Integrate</li>
+                <li class="check-item"><span class="check-mark">&check;</span>Instant Settlements from day 1</li>
+                <li class="check-item"><span class="check-mark">&check;</span>In-depth Reporting and Insights</li>
+              </ul>
+              <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a href="#" class="primary-button">Sign Up Now</a>
+                <a href="#" class="outline-button">Know More <span aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div>
+
+            <div class="relative flex min-h-[360px] items-center justify-center overflow-hidden bg-slate-50 p-6 sm:p-10">
+              <div class="absolute right-8 top-8 h-24 w-24 rounded-full bg-lightBlue/10"></div>
+              <div class="absolute bottom-8 left-8 h-20 w-20 rotate-45 bg-greenLight/20"></div>
+              <div class="relative w-full max-w-md rounded-xl bg-white p-5 shadow-razor-lg">
+                <div class="flex items-center justify-between gap-4 border-b border-slate-100 pb-4">
+                  <div>
+                    <p class="text-xs font-black uppercase tracking-[0.2em] text-greyText">Gateway volume</p>
+                    <p class="mt-1 text-2xl font-black text-deepBlueHead">&#8377;12,48,392</p>
+                  </div>
+                  <span class="rounded-full bg-greenLight/15 px-3 py-1 text-xs font-extrabold text-greenLight">Live</span>
+                </div>
+                <div class="mt-6 grid gap-3">
+                  <div class="flex items-center justify-between rounded-md bg-slate-50 p-4">
+                    <span class="font-extrabold text-greyBlue">UPI</span>
+                    <span class="text-sm font-black text-greenLight">98.7%</span>
+                  </div>
+                  <div class="flex items-center justify-between rounded-md bg-slate-50 p-4">
+                    <span class="font-extrabold text-greyBlue">Cards</span>
+                    <span class="text-sm font-black text-greenLight">96.1%</span>
+                  </div>
+                  <div class="flex items-center justify-between rounded-md bg-slate-50 p-4">
+                    <span class="font-extrabold text-greyBlue">Netbanking</span>
+                    <span class="text-sm font-black text-greenLight">94.4%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Cards -->
+          <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <article class="product-card group">
+              <div class="icon-box">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l2-2a5 5 0 0 0-7.07-7.07l-1.14 1.14"/><path d="M14 11a5 5 0 0 0-7.54-.54l-2 2a5 5 0 0 0 7.07 7.07l1.14-1.14"/></svg>
+              </div>
+              <h3 class="mt-6 text-xl font-black text-deepBlueHead">Payment Links</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Create and share secure links over chat, email, or SMS for fast collections.</p>
+              <a href="#" class="secondary-link mt-auto pt-6">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+
+            <article class="product-card group">
+              <div class="icon-box">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14H4z"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+              </div>
+              <h3 class="mt-6 text-xl font-black text-deepBlueHead">Payment Pages</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Launch branded pages for products, events, fundraisers, and services.</p>
+              <a href="#" class="secondary-link mt-auto pt-6">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+
+            <article class="product-card group">
+              <div class="icon-box">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 8h10M7 12h10M7 16h6"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
+              </div>
+              <h3 class="mt-6 text-xl font-black text-deepBlueHead">Payment Buttons</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Embed ready-to-use payment buttons on landing pages and websites.</p>
+              <a href="#" class="secondary-link mt-auto pt-6">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+
+            <article class="product-card group">
+              <div class="icon-box">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+              </div>
+              <h3 class="mt-6 text-xl font-black text-deepBlueHead">Subscriptions</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Automate recurring billing for memberships, SaaS, and repeat services.</p>
+              <a href="#" class="secondary-link mt-auto pt-6">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+
+            <article class="product-card group">
+              <div class="icon-box">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h11a4 4 0 0 1 0 8H8"/><path d="M7 11l-4 4 4 4"/><path d="M17 7l4 4-4 4"/></svg>
+              </div>
+              <h3 class="mt-6 text-xl font-black text-deepBlueHead">Route</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Split and route payments across vendors, sellers, and business units.</p>
+              <a href="#" class="secondary-link mt-auto pt-6">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+
+            <article class="product-card group">
+              <div class="icon-box">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M7 7v13h10V7"/><path d="M9 11h6M9 15h4"/><path d="M9 4h6l1 3H8z"/></svg>
+              </div>
+              <h3 class="mt-6 text-xl font-black text-deepBlueHead">Smart Collect</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Create virtual accounts and reconcile bank transfers automatically.</p>
+              <a href="#" class="secondary-link mt-auto pt-6">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- RazorpayX -->
+      <section id="banking" class="clip-slant-top relative isolate overflow-hidden bg-deepBlue py-20 text-white md:py-28">
+        <div class="absolute -right-16 top-24 h-48 w-48 rotate-45 border border-lightBlue300/20"></div>
+        <div class="absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_top_left,rgba(43,132,234,0.2),transparent_32rem)]"></div>
+
+        <div class="page-shell relative">
+          <p class="text-center text-sm font-extrabold uppercase tracking-[0.18em] text-greenLight">RazorpayX</p>
+          <h2 class="mt-3 text-center text-[1.75rem] font-black leading-tight md:text-4xl">Explore Razorpay Business Banking</h2>
+          <div class="heading-rule"></div>
+
+          <article class="mt-14 grid overflow-hidden rounded-md border border-white/10 bg-white/[0.04] shadow-razor-lg lg:grid-cols-[0.96fr_1.04fr]">
+            <div class="p-6 sm:p-8 lg:p-12">
+              <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-lightBlue300">Business Banking</p>
+              <h3 class="mt-4 text-2xl font-black leading-snug md:text-3xl">
+                Manage your company&apos;s finances with RazorpayX Business Banking
+              </h3>
+              <ul class="mt-8 grid gap-4">
+                <li class="flex items-start gap-3 text-sm font-bold leading-6 text-white/80"><span class="check-mark">&check;</span>Open a fully digital current account</li>
+                <li class="flex items-start gap-3 text-sm font-bold leading-6 text-white/80"><span class="check-mark">&check;</span>Automate payables and bulk payouts</li>
+                <li class="flex items-start gap-3 text-sm font-bold leading-6 text-white/80"><span class="check-mark">&check;</span>Simplify and track spends with Corporate cards</li>
+                <li class="flex items-start gap-3 text-sm font-bold leading-6 text-white/80"><span class="check-mark">&check;</span>View financial insights at a glance</li>
+              </ul>
+              <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a href="#" class="primary-button">Sign Up</a>
+                <a href="#" class="inline-flex min-h-12 items-center justify-center rounded-sm border border-white/15 px-6 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/10">
+                  Know More <span aria-hidden="true" class="ml-2">&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center p-6 sm:p-10">
+              <img src="data:image/svg+xml,%3csvg%20width='620'%20height='420'%20viewBox='0%200%20620%20420'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20role='img'%20aria-labelledby='bankTitle%20bankDesc'%3e%3ctitle%20id='bankTitle'%3eBusiness%20banking%20workspace%3c/title%3e%3cdesc%20id='bankDesc'%3eAbstract%20cards%20representing%20banking%20balances,%20payouts,%20and%20payroll.%3c/desc%3e%3crect%20width='620'%20height='420'%20rx='32'%20fill='%23071044'/%3e%3crect%20x='64'%20y='62'%20width='246'%20height='144'%20rx='20'%20fill='%232B84EA'/%3e%3crect%20x='94'%20y='96'%20width='110'%20height='14'%20rx='7'%20fill='white'/%3e%3crect%20x='94'%20y='130'%20width='164'%20height='12'%20rx='6'%20fill='%23BDE3FF'/%3e%3crect%20x='94'%20y='161'%20width='72'%20height='22'%20rx='11'%20fill='%2361CEA6'/%3e%3crect%20x='348'%20y='62'%20width='208'%20height='296'%20rx='20'%20fill='white'/%3e%3crect%20x='385'%20y='103'%20width='118'%20height='12'%20rx='6'%20fill='%23344A6C'/%3e%3crect%20x='385'%20y='143'%20width='132'%20height='10'%20rx='5'%20fill='%23CAD4E3'/%3e%3crect%20x='385'%20y='181'%20width='132'%20height='10'%20rx='5'%20fill='%23CAD4E3'/%3e%3crect%20x='385'%20y='219'%20width='132'%20height='10'%20rx='5'%20fill='%23CAD4E3'/%3e%3crect%20x='385'%20y='272'%20width='84'%20height='36'%20rx='18'%20fill='%232B84EA'/%3e%3crect%20x='103'%20y='248'%20width='185'%20height='110'%20rx='18'%20fill='%23F8FAFF'/%3e%3cpath%20d='M132%20318C151.5%20281%20174.5%20296.5%20190.5%20278.5C213.5%20252.5%20231%20284.5%20258%20259'%20stroke='%2361CEA6'%20stroke-width='12'%20stroke-linecap='round'/%3e%3ccircle%20cx='482'%20cy='302'%20r='72'%20fill='%2361CEA6'/%3e%3cpath%20d='M452%20302H512M482%20272V332'%20stroke='white'%20stroke-width='13'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="Business banking interface illustration" class="w-full max-w-lg drop-shadow-2xl" />
+            </div>
+          </article>
+
+          <div class="mt-8 grid gap-6 md:grid-cols-3">
+            <article class="dark-product-card">
+              <h3 class="text-xl font-black">Current Account</h3>
+              <p class="mt-3 text-sm leading-6 text-white/70">Operate a digital-first current account with useful controls and visibility.</p>
+              <a href="#" class="mt-auto pt-6 text-sm font-extrabold text-lightBlue300 transition hover:text-white">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+            <article class="dark-product-card">
+              <h3 class="text-xl font-black">Payouts</h3>
+              <p class="mt-3 text-sm leading-6 text-white/70">Send money to vendors, customers, and employees with automated workflows.</p>
+              <a href="#" class="mt-auto pt-6 text-sm font-extrabold text-lightBlue300 transition hover:text-white">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+            <article class="dark-product-card">
+              <h3 class="text-xl font-black">Payroll</h3>
+              <p class="mt-3 text-sm leading-6 text-white/70">Run salary payouts and keep payroll operations simple for growing teams.</p>
+              <a href="#" class="mt-auto pt-6 text-sm font-extrabold text-lightBlue300 transition hover:text-white">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+          </div>
+
+          <div class="mt-10 flex flex-col items-start justify-between gap-5 rounded-md border border-white/15 bg-white/[0.06] p-5 sm:p-6 md:flex-row md:items-center">
+            <p class="max-w-3xl text-base font-bold leading-7 text-white/90 md:text-lg">Check out the live demo to learn how RazorpayX works. No sign-up required!</p>
+            <a href="#" class="primary-button-light w-full shrink-0 md:w-auto">Check out the demo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Products -->
+      <section id="products" class="section-space bg-slate-50">
+        <div class="page-shell">
+          <p class="section-kicker">Launch faster</p>
+          <h2 class="section-heading mt-3">New in the Razorpay Product Suite</h2>
+          <div class="heading-rule"></div>
+
+          <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+            <article class="new-product-card">
+              <span class="text-3xl font-black text-lightBlue500">01</span>
+              <h3 class="mt-8 text-lg font-black text-deepBlueHead">Corporate Cards</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Simplify recurring, international, and team expenses with savings on every spend.</p>
+              <a href="#" class="secondary-link mt-auto pt-6">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+            <article class="new-product-card">
+              <span class="text-3xl font-black text-lightBlue500">02</span>
+              <h3 class="mt-8 text-lg font-black text-deepBlueHead">UPI AutoPay</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Collect recurring UPI payments with a clean mandate experience.</p>
+              <a href="#" class="secondary-link mt-auto pt-6">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+            <article class="new-product-card">
+              <span class="text-3xl font-black text-lightBlue500">03</span>
+              <h3 class="mt-8 text-lg font-black text-deepBlueHead">Payment Button</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Add a focused payment action to websites and campaigns.</p>
+              <a href="#" class="secondary-link mt-auto pt-6">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+            <article class="new-product-card">
+              <span class="text-3xl font-black text-lightBlue500">04</span>
+              <h3 class="mt-8 text-lg font-black text-deepBlueHead">Magic Checkout</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Reduce friction with a faster checkout flow for returning shoppers.</p>
+              <a href="#" class="secondary-link mt-auto pt-6">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+            <article class="new-product-card">
+              <span class="text-3xl font-black text-lightBlue500">05</span>
+              <h3 class="mt-8 text-lg font-black text-deepBlueHead">Instant Settlements</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Move eligible balances to your account when cash flow matters.</p>
+              <a href="#" class="secondary-link mt-auto pt-6">Know More <span aria-hidden="true">&rarr;</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="section-space relative overflow-hidden bg-[linear-gradient(180deg,#f8fbff_0%,#ffffff_100%)]">
+        <div class="absolute right-0 top-0 hidden h-24 w-24 border-b-[96px] border-r-[96px] border-b-transparent border-r-lightBlue/10 md:block"></div>
+        <div class="page-shell">
+          <p class="section-kicker">Why businesses choose it</p>
+          <h2 class="section-heading mt-3">Features</h2>
+          <div class="heading-rule"></div>
+          <p class="body-copy mx-auto mt-6 max-w-2xl text-center">
+            Accept online payments, automate financial workflows, and deliver a smoother customer experience through a reliable payment platform.
+          </p>
+
+          <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="feature-card">
+              <h3 class="text-lg font-black text-deepBlueHead">Instant Activation</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Go live quickly with a simplified activation flow.</p>
+            </article>
+            <article class="feature-card">
+              <h3 class="text-lg font-black text-deepBlueHead">Easy Integration</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Use straightforward docs and plugins to start collecting.</p>
+            </article>
+            <article class="feature-card">
+              <h3 class="text-lg font-black text-deepBlueHead">API Driven</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Build custom payment flows around structured APIs.</p>
+            </article>
+            <article class="feature-card">
+              <h3 class="text-lg font-black text-deepBlueHead">100+ Payment Modes</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Offer cards, UPI, wallets, bank payments, and more.</p>
+            </article>
+            <article class="feature-card">
+              <h3 class="text-lg font-black text-deepBlueHead">Simple Pricing</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Keep payment costs clear as your volume grows.</p>
+            </article>
+            <article class="feature-card">
+              <h3 class="text-lg font-black text-deepBlueHead">Best in Industry Support</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Get help for launch, scale, and daily operations.</p>
+            </article>
+            <article class="feature-card">
+              <h3 class="text-lg font-black text-deepBlueHead">Dashboard Reporting</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Monitor payments, settlements, refunds, and trends.</p>
+            </article>
+            <article class="feature-card">
+              <h3 class="text-lg font-black text-deepBlueHead">Secure Payments</h3>
+              <p class="mt-3 text-sm leading-6 text-greyText">Protect every transaction with modern security controls.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="section-space bg-white">
+        <div class="page-shell grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr]">
+          <div>
+            <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-lightBlue500">Trusted scale</p>
+            <h2 class="mt-3 text-[1.75rem] font-black leading-tight text-deepBlueHead md:text-4xl">Join the 50,00,000+ businesses using Razorpay</h2>
+            <div class="mt-5 h-1 w-7 rounded-full bg-greenLight"></div>
+            <p class="body-copy mt-6">
+              We make it easier for you to focus on building great products while we work on simplifying your payments.
+              Become one of the many businesses using Razorpay-style workflows to simplify online payments for customers.
+            </p>
+            <p class="body-copy mt-4">
+              Focus on your business while this frontend clone demonstrates how a payments landing page can present product depth, trust, and growth tools.
+            </p>
+            <dl class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+              <div class="rounded-md border border-slate-100 bg-slate-50 p-4">
+                <dt class="text-sm font-bold text-greyText">Businesses</dt>
+                <dd class="mt-1 text-2xl font-black text-deepBlueHead">50L+</dd>
+              </div>
+              <div class="rounded-md border border-slate-100 bg-slate-50 p-4">
+                <dt class="text-sm font-bold text-greyText">Payment modes</dt>
+                <dd class="mt-1 text-2xl font-black text-deepBlueHead">100+</dd>
+              </div>
+              <div class="rounded-md border border-slate-100 bg-slate-50 p-4">
+                <dt class="text-sm font-bold text-greyText">Support</dt>
+                <dd class="mt-1 text-2xl font-black text-deepBlueHead">24x7</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="mx-auto w-full max-w-xl">
+            <img src="data:image/svg+xml,%3csvg%20width='520'%20height='440'%20viewBox='0%200%20520%20440'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20role='img'%20aria-labelledby='trustTitle%20trustDesc'%3e%3ctitle%20id='trustTitle'%3eTrusted%20businesses%20illustration%3c/title%3e%3cdesc%20id='trustDesc'%3eA%20decorative%20business%20network%20with%20cards%20and%20connection%20nodes.%3c/desc%3e%3crect%20x='88'%20y='42'%20width='344'%20height='356'%20rx='32'%20fill='%23F3F8FF'/%3e%3crect%20x='136'%20y='91'%20width='248'%20height='70'%20rx='18'%20fill='white'/%3e%3crect%20x='136'%20y='185'%20width='248'%20height='70'%20rx='18'%20fill='white'/%3e%3crect%20x='136'%20y='279'%20width='248'%20height='70'%20rx='18'%20fill='white'/%3e%3ccircle%20cx='181'%20cy='126'%20r='20'%20fill='%232B84EA'/%3e%3ccircle%20cx='181'%20cy='220'%20r='20'%20fill='%2361CEA6'/%3e%3ccircle%20cx='181'%20cy='314'%20r='20'%20fill='%23344A6C'/%3e%3crect%20x='222'%20y='112'%20width='96'%20height='11'%20rx='5.5'%20fill='%23344A6C'/%3e%3crect%20x='222'%20y='137'%20width='124'%20height='9'%20rx='4.5'%20fill='%23A7B4C8'/%3e%3crect%20x='222'%20y='206'%20width='84'%20height='11'%20rx='5.5'%20fill='%23344A6C'/%3e%3crect%20x='222'%20y='231'%20width='110'%20height='9'%20rx='4.5'%20fill='%23A7B4C8'/%3e%3crect%20x='222'%20y='300'%20width='112'%20height='11'%20rx='5.5'%20fill='%23344A6C'/%3e%3crect%20x='222'%20y='325'%20width='86'%20height='9'%20rx='4.5'%20fill='%23A7B4C8'/%3e%3cpath%20d='M67%20113L96%20160H38L67%20113Z'%20fill='%2361CEA6'/%3e%3cpath%20d='M459%20285L490%20337H428L459%20285Z'%20fill='%232B84EA'/%3e%3ccircle%20cx='435'%20cy='93'%20r='35'%20fill='%2302042A'/%3e%3cpath%20d='M420%2093H450M435%2078V108'%20stroke='white'%20stroke-width='8'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="Business trust network illustration" class="w-full" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="section-space bg-slate-50">
+        <div class="page-shell max-w-5xl">
+          <p class="section-kicker">Customer voice</p>
+          <h2 class="section-heading mt-3">An Experience People Love to Talk About</h2>
+          <div class="heading-rule"></div>
+
+          <article class="mt-14 grid items-center gap-8 rounded-md border border-slate-100 bg-white p-6 shadow-razor sm:p-8 md:grid-cols-[auto_1fr]">
+            <img src="data:image/svg+xml,%3csvg%20width='128'%20height='128'%20viewBox='0%200%20128%20128'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20role='img'%20aria-labelledby='avatarTitle%20avatarDesc'%3e%3ctitle%20id='avatarTitle'%3eUser%20avatar%20placeholder%3c/title%3e%3cdesc%20id='avatarDesc'%3eA%20simple%20placeholder%20portrait%20for%20a%20testimonial.%3c/desc%3e%3crect%20width='128'%20height='128'%20rx='64'%20fill='%23EAF3FF'/%3e%3ccircle%20cx='64'%20cy='50'%20r='24'%20fill='%232B84EA'/%3e%3cpath%20d='M24%20114C30.5%2088.5%2045%2077%2064%2077C83%2077%2097.5%2088.5%20104%20114'%20fill='%2361CEA6'/%3e%3c/svg%3e" alt="User avatar placeholder" class="mx-auto h-28 w-28 rounded-full md:mx-0" />
+            <div>
+              <svg class="h-10 w-10 text-lightBlue500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M7.2 11.8H4.6C4.7 8.9 6 6.8 8.4 5.4L7.1 3.2C3.7 5.1 2 8.1 2 12.2V20h7.8v-8.2H7.2Zm11.4 0H16c.1-2.9 1.4-5 3.8-6.4l-1.3-2.2c-3.4 1.9-5.1 4.9-5.1 9V20h7.8v-8.2h-2.6Z" />
+              </svg>
+              <h3 class="mt-5 text-2xl font-black leading-snug text-deepBlueHead">Readymade Closed Wallet Solution For Quick Refunds</h3>
+              <a href="#" class="secondary-link mt-4">Learn more <span aria-hidden="true">&rarr;</span></a>
+              <div class="mt-7">
+                <p class="font-black text-deepBlueHead">Aarav Mehta</p>
+                <p class="mt-1 text-sm font-bold text-greyText">CEO, XYZ Engineering Company</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="relative overflow-hidden bg-lightBlue py-16 text-white">
+        <div class="absolute -right-16 top-8 h-40 w-40 rotate-45 border border-white/20"></div>
+        <div class="page-shell relative grid items-center gap-10 lg:grid-cols-[1fr_auto]">
+          <div>
+            <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-white/75">Start accepting payments</p>
+            <h2 class="mt-3 text-[1.75rem] font-black leading-tight md:text-4xl">Supercharge your business with Razorpay</h2>
+            <p class="mt-5 max-w-3xl leading-8 text-white/85">
+              Sign up now to experience the future of payments and offer your customers the best checkout experience.
+            </p>
+            <ul class="mt-7 grid gap-3 text-sm font-extrabold sm:grid-cols-2 lg:grid-cols-4">
+              <li class="flex gap-2"><span>&check;</span>Quick Onboarding</li>
+              <li class="flex gap-2"><span>&check;</span>Access to entire product suite</li>
+              <li class="flex gap-2"><span>&check;</span>API Access</li>
+              <li class="flex gap-2"><span>&check;</span>24x7 Support</li>
+            </ul>
+          </div>
+          <a href="#" class="primary-button-light w-full sm:w-auto">Sign Up Now</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-white py-14">
+      <div class="page-shell grid gap-10 lg:grid-cols-[1.05fr_1.95fr]">
+        <div>
+          <a href="#" class="flex items-center gap-3 text-deepBlueHead" aria-label="Razorpay clone home">
+            <span class="grid h-10 w-10 place-items-center rounded-sm bg-lightBlue text-xl font-black text-white">R</span>
+            <span class="text-xl font-black tracking-wide">Razorpay</span>
+          </a>
+          <p class="mt-6 text-sm leading-7 text-greyText">
+            Razorpay is a payments solution in India that allows businesses to accept, process, and disburse payments with its product suite. It gives access to payment modes including credit card, debit card, netbanking, UPI, and popular wallets.
+          </p>
+          <p class="mt-4 text-sm leading-7 text-greyText">
+            RazorpayX supercharges business banking by bringing effectiveness, efficiency, and clarity to financial processes such as current accounts, payouts, and payroll workflows.
+          </p>
+          <p class="mt-4 text-sm leading-7 text-greyText">
+            Manage marketplace payments, automate bank transfers, collect recurring payments, share invoices, and present lending products from a single frontend landing page.
+          </p>
+          <p class="mt-4 text-xs font-semibold leading-6 text-greyText">
+            Disclaimer: this is a student-friendly frontend clone. It does not include real payments, checkout processing, authentication, backend services, bank accounts, or Razorpay API calls.
+          </p>
+
+          <form class="mt-7" action="#">
+            <label for="newsletter" class="text-sm font-black text-deepBlueHead">Subscribe to updates</label>
+            <div class="mt-3 flex flex-col gap-3 sm:flex-row">
+              <input
+                id="newsletter"
+                type="email"
+                placeholder="Email address"
+                class="min-h-11 min-w-0 flex-1 rounded-sm border border-slate-200 px-4 text-sm outline-none transition focus:border-lightBlue focus:ring-4 focus:ring-lightBlue/10"
+              />
+              <button type="submit" class="rounded-sm bg-lightBlue px-5 py-3 text-sm font-black text-white transition hover:bg-lightBlue500">Subscribe</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <h3 class="text-sm font-black uppercase text-greyBlue">Banking Plus</h3>
+            <ul class="mt-4 space-y-3 text-sm font-semibold text-greyText">
+              <li><a href="#" class="footer-link">Current Accounts</a></li>
+              <li><a href="#" class="footer-link">Payout Links</a></li>
+              <li><a href="#" class="footer-link">Corporate Credit Card</a></li>
+              <li><a href="#" class="footer-link">View Live Demo</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm font-black uppercase text-greyBlue">Lending</h3>
+            <ul class="mt-4 space-y-3 text-sm font-semibold text-greyText">
+              <li><a href="#" class="footer-link">Razorpay Capital</a></li>
+              <li><a href="#" class="footer-link">Instant Settlements</a></li>
+              <li><a href="#" class="footer-link">Line of Credit</a></li>
+            </ul>
+            <h3 class="mt-8 text-sm font-black uppercase text-greyBlue">Risk &amp; Fraud</h3>
+            <ul class="mt-4 space-y-3 text-sm font-semibold text-greyText">
+              <li><a href="#" class="footer-link">Thirdwatch</a></li>
+              <li><a href="#" class="footer-link">Fraud Detection</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm font-black uppercase text-greyBlue">Become a Partner</h3>
+            <ul class="mt-4 space-y-3 text-sm font-semibold text-greyText">
+              <li><a href="#" class="footer-link">Referral Program</a></li>
+              <li><a href="#" class="footer-link">Onboarding APIs</a></li>
+              <li><a href="#" class="footer-link">Partners</a></li>
+            </ul>
+            <h3 class="mt-8 text-sm font-black uppercase text-greyBlue">More</h3>
+            <ul class="mt-4 space-y-3 text-sm font-semibold text-greyText">
+              <li><a href="#" class="footer-link">Route</a></li>
+              <li><a href="#" class="footer-link">Invoices</a></li>
+              <li><a href="#" class="footer-link">Subscriptions</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm font-black uppercase text-greyBlue">Developers</h3>
+            <ul class="mt-4 space-y-3 text-sm font-semibold text-greyText">
+              <li><a href="#" class="footer-link">Docs</a></li>
+              <li><a href="#" class="footer-link">Integrations</a></li>
+              <li><a href="#" class="footer-link">API Reference</a></li>
+            </ul>
+            <h3 class="mt-8 text-sm font-black uppercase text-greyBlue">Resources</h3>
+            <ul class="mt-4 space-y-3 text-sm font-semibold text-greyText">
+              <li><a href="#" class="footer-link">Blog</a></li>
+              <li><a href="#" class="footer-link">Support</a></li>
+              <li><a href="#" class="footer-link">Knowledge Base</a></li>
+            </ul>
+            <h3 class="mt-8 text-sm font-black uppercase text-greyBlue">Solutions</h3>
+            <ul class="mt-4 space-y-3 text-sm font-semibold text-greyText">
+              <li><a href="#" class="footer-link">Education</a></li>
+              <li><a href="#" class="footer-link">Ecommerce</a></li>
+              <li><a href="#" class="footer-link">SaaS</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuButton = document.querySelector("#menu-button");
+      const mobileMenu = document.querySelector("#mobile-menu");
+      const openIcon = document.querySelector("#menu-open-icon");
+      const closeIcon = document.querySelector("#menu-close-icon");
+      const mobileLinks = document.querySelectorAll("#mobile-menu a");
+
+      const setMenuState = (isOpen) => {
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        mobileMenu.classList.toggle("hidden", !isOpen);
+        openIcon.classList.toggle("hidden", isOpen);
+        closeIcon.classList.toggle("hidden", !isOpen);
+      };
+
+      menuButton.addEventListener("click", () => {
+        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+        setMenuState(!isOpen);
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => setMenuState(false));
+      });
+
+      const demoProducts = {
+        mouse: { name: "Wireless Mouse", price: 799 },
+        keyboard: { name: "Keyboard", price: 1299 },
+        cable: { name: "USB-C Cable", price: 399 },
+      };
+
+      const cart = {};
+      let selectedPaymentMethod = "UPI";
+
+      const currency = (amount) => `\u20b9${amount.toLocaleString("en-IN")}`;
+      const cartItemsContainer = document.querySelector("#cart-items");
+      const checkoutSubtotal = document.querySelector("#checkout-subtotal");
+      const checkoutFee = document.querySelector("#checkout-fee");
+      const checkoutTotal = document.querySelector("#checkout-total");
+      const checkoutStatus = document.querySelector("#checkout-status");
+      const paymentButtons = document.querySelectorAll(".payment-method");
+
+      const getSubtotal = () => {
+        return Object.entries(cart).reduce((sum, [id, quantity]) => {
+          return sum + demoProducts[id].price * quantity;
+        }, 0);
+      };
+
+      const renderCart = () => {
+        const subtotal = getSubtotal();
+        const platformFee = subtotal > 0 ? 19 : 0;
+        const total = subtotal + platformFee;
+        const selectedItems = Object.entries(cart).filter(([, quantity]) => quantity > 0);
+
+        checkoutSubtotal.textContent = currency(subtotal);
+        checkoutFee.textContent = currency(platformFee);
+        checkoutTotal.textContent = currency(total);
+
+        if (selectedItems.length === 0) {
+          cartItemsContainer.innerHTML = '<p class="text-sm font-semibold text-greyText">Your selected items will appear here.</p>';
+          return;
+        }
+
+        cartItemsContainer.innerHTML = selectedItems
+          .map(([id, quantity]) => {
+            const product = demoProducts[id];
+            return `
+              <div class="flex items-center justify-between gap-4 rounded-sm bg-white p-3 shadow-sm">
+                <div>
+                  <p class="text-sm font-black text-deepBlueHead">${product.name}</p>
+                  <p class="mt-1 text-xs font-bold text-greyText">${currency(product.price)} x ${quantity}</p>
+                </div>
+                <p class="text-sm font-black text-deepBlueHead">${currency(product.price * quantity)}</p>
+              </div>
+            `;
+          })
+          .join("");
+      };
+
+      document.querySelectorAll(".add-to-cart").forEach((button) => {
+        button.addEventListener("click", () => {
+          const productId = button.dataset.id;
+          cart[productId] = (cart[productId] || 0) + 1;
+          checkoutStatus.classList.add("hidden");
+          renderCart();
+        });
+      });
+
+      paymentButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          selectedPaymentMethod = button.dataset.method;
+          paymentButtons.forEach((methodButton) => methodButton.classList.remove("payment-method-active"));
+          button.classList.add("payment-method-active");
+          checkoutStatus.classList.add("hidden");
+        });
+      });
+
+      document.querySelector("#pay-securely").addEventListener("click", () => {
+        if (getSubtotal() === 0) {
+          checkoutStatus.textContent = "Add an item to try the demo checkout.";
+          checkoutStatus.classList.remove("hidden", "bg-greenLight/15", "text-greenLight");
+          checkoutStatus.classList.add("bg-lightBlue/10", "text-lightBlue500");
+          return;
+        }
+
+        checkoutStatus.textContent = `Payment successful \u2014 demo only (${selectedPaymentMethod})`;
+        checkoutStatus.classList.remove("hidden", "bg-lightBlue/10", "text-lightBlue500");
+        checkoutStatus.classList.add("bg-greenLight/15", "text-greenLight");
+      });
+
+      renderCart();
+    </script>
+  </body>
+</html>
