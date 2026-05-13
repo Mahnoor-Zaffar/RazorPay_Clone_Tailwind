@@ -145,6 +145,3 @@ It is not affiliated with, endorsed by, or connected to Razorpay. Razorpay names
 
 No real payments are processed. The checkout demo is mock UI only and does not use the Razorpay SDK, backend services, authentication, database storage, or payment gateway integration.
 
-## License
-
-License placeholder. Add your preferred license, such as MIT, before publishing or distributing the project.
